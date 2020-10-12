@@ -1,10 +1,26 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="app">
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a href="#" class="navbar-brand">Books App</a>
+      <div class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a href="/books" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="/addBook" class="nav-link">Add Book</a>
+        </li>
+      </div>
+    </nav>
+    <div class="container mt-3">
+      <router-view />
+    </div>
   </div>
-  <router-view />
 </template>
+
+<script lang="ts">
+import { Vue } from 'vue-class-component';
+export default class App extends Vue {}
+</script>
 
 <style>
 #app {
